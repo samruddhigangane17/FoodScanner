@@ -46,8 +46,9 @@ static void typeIngredients(unsigned int profile) {
     analyseText(text, profile);
 }
 
-int main(void) {
+int main(int argc, char **argv) {
     char choice[16];
+    if (argc > 1 && strcmp(argv[1], "--api") == 0) return apiMain(argc, argv);  /* web mode */
     int loaded = loadDB(DB_FILE);
     if (loaded == 0) {
         printf("Could not load %s. Run the program from the project root folder.\n", DB_FILE);
@@ -55,6 +56,7 @@ int main(void) {
     }
     unsigned int profile = loadProfile();
     loadHistory();
+    if (argc >= 2 && strncmp(argv[1], "--", 2) == 0) return cliMode(argc, argv);
 
     printf("=========================================\n");
     printf("        FOOD LABEL SCANNER\n");

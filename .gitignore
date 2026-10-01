@@ -15,3 +15,5 @@ data/history.txt
 *.swp
 .DS_Store
 Thumbs.db
+images/uploads/
+__pycache__/

@@ -66,3 +66,12 @@ Merge into `main` only after `make test` passes.
 - The database has about 190 entries; unknown ingredients are reported, not guessed.
 - "May contain traces" statements are treated as ingredients to stay on the safe side.
 - Informational only - always read the real label; consult a doctor for severe allergies.
+
+## Web frontend (optional, recommended for the demo)
+All logic stays in C; `server.py` only connects the browser to the C program.
+```
+build.bat (or make)     # build scanner first
+python server.py        # needs Python 3, no extra packages
+```
+Open http://localhost:8000 - choose restrictions, upload a label photo or type the
+ingredients, press Analyse. Files: `server.py`, `web/index.html`, `src/jsonout.c`.
