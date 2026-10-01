@@ -9,7 +9,7 @@ unsigned int checkWarnings(const Ingredient *ing, unsigned int profile) {
     return ing->tags & profile;
 }
 
-int severityOf(unsigned int conflict) {
+static int severityOf(unsigned int conflict) {
     if (conflict & (NUTS | DAIRY | GLUTEN | SOY)) return 2;   /* allergy type */
     return conflict ? 1 : 0;                                  /* diet type    */
 }

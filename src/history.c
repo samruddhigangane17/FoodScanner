@@ -66,19 +66,6 @@ void freeHistory(void) {
     while (head) { Scan *t = head->next; free(head); head = t; }
 }
 
-/* history as JSON for the web frontend */
-void historyJson(void) {
-    printf("{\"ok\":true,\"history\":[");
-    for (Scan *p = head; p; p = p->next) {
-        printf("%s{\"product\":", p == head ? "" : ",");
-        jsonString(p->product);
-        printf(",\"warnings\":%d,\"when\":", p->warnings);
-        jsonString(p->when);
-        printf("}");
-    }
-    printf("]}\n");
-}
-
 void printHistoryJson(void) {
     printf("{\"history\":[");
     for (Scan *p = head; p; p = p->next) {

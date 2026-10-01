@@ -46,9 +46,31 @@ static void typeIngredients(unsigned int profile) {
     analyseText(text, profile);
 }
 
+/* non-interactive mode used by server.py:
+ *   scanner --json <profile> <product> <text>
+ *   scanner --json-ocr <profile> <product> <imagePath>
+ *   scanner --history-json                                  */
+static int cliMode(int argc, char **argv) {
+    static char t[MAX_TEXT];
+    if (strcmp(argv[1], "--history-json") == 0) { printHistoryJson(); return 0; }
+    if (argc >= 5) {
+        unsigned int p = (unsigned int)strtoul(argv[2], NULL, 10) & ALL_FLAGS;
+        if (strcmp(argv[1], "--json") == 0) { jsonAnalyse(argv[3], argv[4], p, 0); return 0; }
+        if (strcmp(argv[1], "--json-ocr") == 0) {
+            if (!runOCR(argv[4], t, MAX_TEXT)) {
+                printf("{\"ok\":false,\"error\":\"OCR failed. Check that Tesseract is installed and the photo is clear.\"}\n");
+                return 0;
+            }
+            jsonAnalyse(argv[3], t, p, 1);
+            return 0;
+        }
+    }
+    printf("{\"ok\":false,\"error\":\"bad arguments\"}\n");
+    return 1;
+}
+
 int main(int argc, char **argv) {
     char choice[16];
-    if (argc > 1 && strcmp(argv[1], "--api") == 0) return apiMain(argc, argv);  /* web mode */
     int loaded = loadDB(DB_FILE);
     if (loaded == 0) {
         printf("Could not load %s. Run the program from the project root folder.\n", DB_FILE);

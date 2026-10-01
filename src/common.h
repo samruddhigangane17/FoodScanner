@@ -72,7 +72,6 @@ void         saveProfile(unsigned int profile);
 void         printProfile(unsigned int profile);
 unsigned int editProfile(unsigned int profile);              /* interactive menu */
 unsigned int checkWarnings(const Ingredient *ing, unsigned int profile);
-int          severityOf(unsigned int conflict);              /* 2 allergy, 1 diet, 0 none */
 void         runAnalysis(const char *product, char items[][NAME_LEN], int n,
                          unsigned int profile);
 void         mergeSortWarnings(Warning *w, int n);           /* severity, high first */
@@ -80,11 +79,6 @@ void         addScan(const char *product, int warnings);
 void         loadHistory(void);
 void         showHistory(void);
 void         freeHistory(void);
-void         historyJson(void);                              /* history as JSON (web UI) */
-
-/* ================= web frontend bridge : api.c ============================= */
-int  apiMain(int argc, char **argv);     /* scanner --api ... prints JSON */
-void jsonString(const char *s);
 
 void         printHistoryJson(void);
 
