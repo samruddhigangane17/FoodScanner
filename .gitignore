@@ -1,0 +1,17 @@
+# build output
+scanner
+scanner.exe
+test_core
+test_core.exe
+*.o
+
+# generated at run time
+ocr_out.txt
+data/profile.txt
+data/history.txt
+
+# editor / OS
+.vscode/
+*.swp
+.DS_Store
+Thumbs.db

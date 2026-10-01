@@ -1,0 +1,207 @@
+# Food Label Scanner - ingredient database
+# Format: name,tags,explanation      (explanation may contain commas)
+# tags = sum of: 1 nuts, 2 dairy, 4 gluten, 8 soy, 16 non-vegetarian, 32 sugar
+#
+# ---- sugars and sweeteners (32) ----
+sugar,32,Common sweetener. Raises blood sugar quickly.
+brown sugar,32,Sugar mixed with molasses. Still raises blood sugar.
+icing sugar,32,Finely powdered sugar. Raises blood sugar.
+jaggery,32,Unrefined cane sugar. Natural but still high in sugar.
+glucose syrup,32,Sweet syrup made from starch. Raises blood sugar fast.
+glucose,32,Simple sugar used for sweetness and energy.
+dextrose,32,Another name for glucose. Raises blood sugar.
+fructose,32,Fruit sugar. Sweet; large amounts are not good for diabetics.
+corn syrup,32,Sweet syrup made from corn starch.
+high fructose corn syrup,32,Very sweet syrup used in drinks and snacks. Best limited.
+invert sugar syrup,32,Sugar syrup split into glucose and fructose. Very sweet.
+maltodextrin,32,Starch-based powder used as filler. Raises blood sugar fast.
+molasses,32,Dark syrup left over from making sugar.
+honey,48,Sweet liquid made by bees. Contains sugar and is not vegan.
+liquid glucose,32,Thick sweet syrup made from starch.
+aspartame,0,E951. Artificial sweetener with almost no calories. People with PKU must avoid it.
+e951,0,Aspartame. Artificial sweetener with almost no calories. People with PKU must avoid it.
+sucralose,0,E955. Zero-calorie artificial sweetener.
+e955,0,Sucralose. Zero-calorie artificial sweetener.
+acesulfame k,0,E950. Zero-calorie artificial sweetener.
+e950,0,Acesulfame K. Zero-calorie artificial sweetener.
+stevia,0,Natural zero-calorie sweetener from the stevia plant.
+sorbitol,0,E420. Sugar alcohol sweetener. Large amounts can upset the stomach.
+e420,0,Sorbitol. Sugar alcohol sweetener. Large amounts can upset the stomach.
+# ---- gluten / cereals (4) ----
+wheat flour,4,Flour made from wheat. Contains gluten.
+refined wheat flour,4,Processed white wheat flour (maida). Contains gluten.
+whole wheat flour,4,Flour from the whole wheat grain. Contains gluten.
+maida,4,Refined white wheat flour. Contains gluten.
+atta,4,Whole wheat flour. Contains gluten.
+wheat,4,Cereal grain. Contains gluten.
+wheat gluten,4,Protein from wheat that gives dough its stretch. Pure gluten.
+gluten,4,Protein found in wheat, barley and rye. Avoid with coeliac disease.
+semolina,4,Coarse flour from wheat (suji/rava). Contains gluten.
+barley malt,4,Sweet extract from barley. Contains gluten.
+malt extract,4,Sweet extract usually made from barley. Contains gluten.
+rye flour,4,Flour from rye grain. Contains gluten.
+barley,4,Cereal grain. Contains gluten.
+oats,4,Cereal grain. Naturally gluten-free but often mixed with wheat during processing.
+rice flour,0,Flour made from rice. Gluten-free.
+corn flour,0,Fine flour made from maize. Gluten-free.
+corn starch,0,Starch from maize used to thicken foods. Gluten-free.
+potato starch,0,Starch from potatoes used to thicken foods.
+starch,0,Thickener from plants such as corn or potato.
+# ---- dairy (2) ----
+milk,2,Cow or buffalo milk. Contains lactose and milk protein.
+milk powder,2,Dried milk. Contains lactose and milk protein.
+skimmed milk powder,2,Dried milk with fat removed. Contains lactose and milk protein.
+whole milk powder,2,Dried full-fat milk. Contains lactose and milk protein.
+milk solids,2,Dried parts of milk. Contains lactose and milk protein.
+milk fat,2,Fat part of milk. Dairy ingredient.
+butter,2,Fat made by churning cream. Dairy.
+ghee,2,Clarified butter. Dairy, though with very little lactose.
+cream,2,Fatty part of milk. Dairy.
+cheese,2,Made from curdled milk. Dairy.
+curd,2,Fermented milk (dahi). Dairy.
+yogurt,2,Fermented milk. Dairy.
+buttermilk,2,Liquid left after churning butter, or fermented milk. Dairy.
+whey,2,Watery part of milk left after cheese making. Dairy.
+whey powder,2,Dried whey. Dairy; contains lactose.
+whey protein,2,Protein from milk whey. Dairy.
+casein,2,Main protein in milk. Strong milk allergen.
+caseinate,2,Salt of milk protein casein. Dairy.
+lactose,2,Natural sugar in milk. Problem for lactose intolerance.
+condensed milk,34,Thick sweetened milk. Contains dairy and a lot of sugar.
+milk chocolate,34,Chocolate made with milk and sugar. Dairy and sugar.
+# ---- nuts (1) ----
+peanuts,1,Groundnuts. A common and sometimes severe allergen.
+peanut,1,Groundnut. A common and sometimes severe allergen.
+peanut oil,1,Oil made from peanuts. Dangerous for peanut allergy.
+peanut butter,1,Spread made from ground peanuts. Common allergen.
+groundnut oil,1,Oil made from peanuts. Dangerous for peanut allergy.
+almonds,1,Tree nut. Common allergen.
+cashew nuts,1,Tree nut. Common allergen.
+cashew,1,Tree nut. Common allergen.
+walnuts,1,Tree nut. Common allergen.
+hazelnuts,1,Tree nut. Common allergen.
+pistachios,1,Tree nut. Common allergen.
+nuts,1,General term for nuts. Common allergen.
+tree nuts,1,Almonds, cashews, walnuts and similar nuts. Common allergen.
+# ---- soy (8) ----
+soy,8,Soybean. Common allergen.
+soya,8,Soybean. Common allergen.
+soybean oil,8,Oil from soybeans. Highly refined oil is usually low in allergen.
+soy protein,8,Protein extracted from soybeans. Allergen.
+soya protein,8,Protein extracted from soybeans. Allergen.
+soya flour,8,Flour from ground soybeans. Allergen.
+soy lecithin,8,E322 from soybeans. Keeps oil and water mixed.
+lecithin,8,E322. Emulsifier that keeps oil and water mixed. Usually from soy.
+e322,8,Lecithin. Emulsifier that keeps oil and water mixed. Usually from soy.
+tofu,8,Soybean curd. Soy allergen.
+soy sauce,12,Salty sauce made from soybeans and wheat. Contains soy and gluten.
+textured vegetable protein,8,Meat substitute made from soy flour. Soy allergen.
+# ---- non-vegetarian (16) ----
+gelatin,16,E441. Made from animal bones and skin. Not vegetarian.
+gelatine,16,E441. Made from animal bones and skin. Not vegetarian.
+e441,16,Gelatin. Made from animal bones and skin. Not vegetarian.
+carmine,16,E120. Red colour made from crushed insects. Not vegetarian.
+e120,16,Carmine. Red colour made from crushed insects. Not vegetarian.
+cochineal,16,Red colour made from crushed insects. Not vegetarian.
+shellac,16,E904. Glaze made from insect secretions. Not vegetarian.
+e904,16,Shellac. Glaze made from insect secretions. Not vegetarian.
+lard,16,Pig fat. Not vegetarian.
+animal fat,16,Fat from animals. Not vegetarian.
+beef fat,16,Fat from cattle. Not vegetarian.
+tallow,16,Rendered animal fat. Not vegetarian.
+fish oil,16,Oil from fish. Not vegetarian.
+fish,16,Fish. Not vegetarian.
+chicken,16,Poultry meat. Not vegetarian.
+meat,16,Animal flesh. Not vegetarian.
+pork,16,Pig meat. Not vegetarian.
+beef,16,Cattle meat. Not vegetarian.
+anchovy,16,Small fish used for flavour. Not vegetarian.
+isinglass,16,Fish bladder used to clear drinks. Not vegetarian.
+egg,0,Hen egg. Fine for vegetarians who eat eggs but not for vegans. Also a common allergen.
+egg powder,0,Dried egg. Fine for vegetarians who eat eggs but not for vegans. Common allergen.
+# ---- common additives and basics (0) ----
+water,0,Plain water used in making the food.
+salt,0,Common seasoning. High amounts raise blood pressure.
+iodised salt,0,Salt with added iodine for thyroid health.
+citric acid,0,E330. Natural sour acid from citrus fruit. Adds sourness and preserves.
+e330,0,Citric acid. Natural sour acid that adds sourness and preserves.
+ascorbic acid,0,E300. Vitamin C. Keeps food fresh and acts as an antioxidant.
+e300,0,Ascorbic acid (vitamin C). Keeps food fresh.
+sodium benzoate,0,E211. Preservative that stops mould and bacteria. Can trigger reactions in a few people.
+e211,0,Sodium benzoate. Preservative that stops mould and bacteria.
+potassium sorbate,0,E202. Preservative that stops mould and yeast.
+e202,0,Potassium sorbate. Preservative that stops mould and yeast.
+monosodium glutamate,0,E621 (MSG). Flavour enhancer that makes food taste savoury. Some people are sensitive.
+msg,0,Monosodium glutamate (E621). Flavour enhancer. Some people are sensitive.
+e621,0,Monosodium glutamate (MSG). Flavour enhancer. Some people are sensitive.
+mono and diglycerides,0,E471. Emulsifier that keeps texture smooth. Can be plant or animal source; strict vegetarians should check.
+e471,0,Mono and diglycerides. Emulsifier; can be plant or animal source. Strict vegetarians should check.
+xanthan gum,0,E415. Thickener made by fermenting sugar. Safe for most people.
+e415,0,Xanthan gum. Thickener made by fermenting sugar.
+pectin,0,E440. Fruit-based gelling agent used in jams.
+e440,0,Pectin. Fruit-based gelling agent used in jams.
+carrageenan,0,E407. Thickener from seaweed.
+e407,0,Carrageenan. Thickener from seaweed.
+guar gum,0,E412. Thickener from guar beans.
+e412,0,Guar gum. Thickener from guar beans.
+caramel colour,0,E150. Brown colour made by heating sugar.
+e150d,0,Caramel colour. Brown colour made by heating sugar.
+tartrazine,0,E102. Yellow artificial colour. Can trigger reactions in sensitive people.
+e102,0,Tartrazine. Yellow artificial colour. Can trigger reactions in sensitive people.
+sunset yellow,0,E110. Orange artificial colour. Can trigger reactions in sensitive people.
+e110,0,Sunset yellow. Orange artificial colour. Can trigger reactions in sensitive people.
+brilliant blue,0,E133. Blue artificial colour.
+e133,0,Brilliant blue. Blue artificial colour.
+sodium bicarbonate,0,E500. Baking soda. Helps dough rise.
+baking soda,0,Sodium bicarbonate. Helps dough rise.
+baking powder,0,Mix that makes cakes and biscuits rise.
+raising agent,0,Ingredient that makes baked foods rise.
+yeast,0,Tiny fungus that makes dough rise.
+yeast extract,0,Savoury flavour made from yeast. Contains natural glutamates.
+emulsifier,0,Helps oil and water mix smoothly. Check the bracket for the exact type.
+emulsifiers,0,Help oil and water mix smoothly. Check the bracket for the exact types.
+stabilizer,0,Keeps the texture of the food consistent.
+stabiliser,0,Keeps the texture of the food consistent.
+preservative,0,Keeps food from spoiling for longer.
+antioxidant,0,Stops fats and oils from going bad.
+acidity regulator,0,Controls how sour or sweet the food tastes and helps preserve it.
+flavour enhancer,0,Makes the taste of food stronger.
+colour,0,Added colour to make food look attractive.
+flavour,0,Added flavour. The exact source is not listed.
+natural flavours,0,Flavours from natural sources. Exact source is not listed.
+artificial flavours,0,Flavours made in a lab to taste like natural ones.
+nature identical flavouring substances,0,Lab-made flavours chemically identical to natural ones.
+vanilla flavour,0,Flavour that tastes like vanilla.
+vanillin,0,Main flavour compound of vanilla, usually made in a lab.
+edible vegetable oil,0,Oil from plants. Exact type is not listed (often palm, sunflower or soybean).
+vegetable oil,0,Oil from plants. Exact type is not listed.
+palm oil,0,Cheap oil from palm fruit. High in saturated fat.
+palmolein oil,0,Liquid part of palm oil. High in saturated fat.
+sunflower oil,0,Oil from sunflower seeds. Mostly unsaturated fat.
+refined sunflower oil,0,Processed oil from sunflower seeds.
+rice bran oil,0,Oil from rice bran. Mostly unsaturated fat.
+cocoa powder,0,Ground roasted cocoa beans. Gives chocolate flavour.
+cocoa butter,0,Natural fat from cocoa beans.
+cocoa solids,0,Dry part of cocoa beans. Gives chocolate flavour.
+cocoa mass,0,Ground cocoa beans. Gives chocolate flavour.
+spices,0,Mixture of dried plant spices. Exact types are not listed.
+spice,0,Dried plant flavouring.
+turmeric,0,Yellow spice. Natural colour and flavour.
+chilli powder,0,Ground dried chillies. Adds heat.
+red chilli powder,0,Ground dried red chillies. Adds heat.
+black pepper,0,Spice that adds mild heat.
+onion powder,0,Dried ground onion. Adds flavour.
+garlic powder,0,Dried ground garlic. Adds flavour.
+cumin,0,Spice with earthy flavour.
+coriander,0,Herb or seed used for flavour.
+tomato powder,0,Dried tomato. Adds flavour and colour.
+tomato paste,0,Thick cooked tomato. Adds flavour and colour.
+vinegar,0,Sour liquid made by fermenting alcohol. Used as flavour and preservative.
+dried vegetables,0,Dehydrated vegetables used for flavour.
+mixed fruit,0,Pieces of different fruits.
+glycerol,0,E422. Sweet-tasting moisture keeper.
+e422,0,Glycerol. Sweet-tasting moisture keeper.
+iron,0,Mineral added to improve nutrition.
+vitamins,0,Vitamins added to improve nutrition.
+minerals,0,Minerals added to improve nutrition.
+folic acid,0,Vitamin B9 added to improve nutrition.
